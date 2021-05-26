@@ -1,0 +1,15 @@
+user@uservm:~/.ssh$ user@uservm:~/.ssh$ cd ~
+user@uservm:~$ cd ..
+user@uservm:/home$ cd ..
+user@uservm:/$ cd /home/user/
+user@uservm:~$ cd /home/user/Linux-GB/
+user@uservm:~/Linux-GB$ cd ..
+user@uservm:~$ cd /
+user@uservm:/$ cd home/
+user@uservm:/home$ cd user/
+user@uservm:~$ cd Linux-GB/
+user@uservm:~/Linux-GB$
+
+cd ~ - Переход в домашний каталог /home/user
+cd .. - Переход на уровень выше
+cd / - Переход в корневой каталог
