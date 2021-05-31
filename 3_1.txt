@@ -1,0 +1,5 @@
+user@uservm:~$ sudo useradd -d /home/user1 -m -s /bin/bash user1
+user@uservm:~$ cat /etc/passwd
+user1:x:1001:1003::/home/user1:/bin/bash
+user@uservm:~$ sudo userdel -r user1
+userdel: user1 mail spool (/var/mail/user1) not found

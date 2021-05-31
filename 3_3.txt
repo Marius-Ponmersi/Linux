@@ -1,0 +1,1 @@
+user@uservm:~$ sudo usermod -aG sudo user_1

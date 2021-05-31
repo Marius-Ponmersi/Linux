@@ -1,0 +1,23 @@
+a. 
+user@uservm:~$ sudo groupadd team1
+user@uservm:~$ sudo groupadd team2
+user@uservm:~$ cat /etc/group
+team1:x:1002:
+team2:x:1003:
+b.
+user@uservm:~$ sudo usermod -g team1 user_1
+user@uservm:~$ sudo usermod -g team2 user_1
+в файле /etc/group почему-то не происходят изменения
+c.
+user@uservm:~$ sudo usermod -aG team2 user_1
+user@uservm:~$ cat /etc/group
+team1:x:1002:user_1
+team2:x:1003:user_1
+d.
+user@uservm:~$ sudo gpasswd -d user_1 team1
+Removing user user_1 from group team1
+user@uservm:~$ sudo gpasswd -d user_1 team2
+Removing user user_1 from group team2
+user@uservm:~$ cat /etc/group
+team1:x:1002:
+team2:x:1003:
