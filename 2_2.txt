@@ -1,0 +1,39 @@
+user@uservm:~/Linux-GB$ touch file_1.txt
+user@uservm:~/Linux-GB$ nano file_2.txt
+user@uservm:~/Linux-GB$ cat file_2.txt
+Hello world!
+Second
+Third
+Fourth
+FourthFourthFourthFourthFourthFourthFourthFourthFourthFourthFourthFourthFourthFourthFourthFourthFourthFourthFourthFourth
+user@uservm:~/Linux-GB$ vim file_3.txt
+user@uservm:~/Linux-GB$ cat file_3.txt
+This file created by Vim
+End
+user@uservm:~/Linux-GB$ cp file_2.txt file_1.txt
+user@uservm:~/Linux-GB$ cp file_3.txt file_4.txt
+user@uservm:~/Linux-GB$ ls
+file_1.txt  file_2.txt  file_3.txt  file_4.txt
+user@uservm:~/Linux-GB$ mv file_1.txt ./dir1/
+user@uservm:~/Linux-GB$ mv file_2.txt ./dir1/dir2/dir3/
+user@uservm:~/Linux-GB$ ls
+dir1  file_3.txt  file_4.txt
+user@uservm:~/Linux-GB$ cd dir1/
+user@uservm:~/Linux-GB/dir1$ ls
+dir2  file_1.txt
+user@uservm:~/Linux-GB/dir1$ cd dir2/
+user@uservm:~/Linux-GB/dir1/dir2$ ls
+dir3
+user@uservm:~/Linux-GB/dir1/dir2$ cd dir3/
+user@uservm:~/Linux-GB/dir1/dir2/dir3$ ls
+file_2.txt
+
+cp - копирование
+mv - перемещение
+mkdir - создание каталога; 
+mkdir -p создать вложенные каталоги
+cp -r - рекурсивное копирование (для копирования папок с вложенными папками)
+nano - редактор nano
+vim - редактор vim
+touch - создание файла
+pwd - полный путь текущего каталога
