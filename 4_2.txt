@@ -1,0 +1,1 @@
+user@uservm:~$ ls -l | sed '1d' | cut -c -10 | sort | uniq

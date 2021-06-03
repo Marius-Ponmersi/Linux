@@ -1,0 +1,2 @@
+user@uservm:~/Linux-GB$ echo > errors.log
+user@uservm:~/Linux-GB$ cat /etc/* 2> errors.log

@@ -1,0 +1,3 @@
+user@uservm:~$ mc
+user@uservm:~$ ps -ef | grep mc
+user@uservm:~$ kill -15 21733Terminated
