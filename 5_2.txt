@@ -1,0 +1,7 @@
+user@uservm:~/Linux-GB/lesson5$ mv file2.txt newfile1.txt
+user@uservm:~/Linux-GB/lesson5$ mv file4.txt newfile2.txt
+user@uservm:~/Linux-GB/lesson5$ ln newfile1.txt link1.txt
+user@uservm:~/Linux-GB/lesson5$ ln -s newfile2.txt  link2.txt
+user@uservm:~/Linux-GB/lesson5$ mv link1.txt ..
+user@uservm:~/Linux-GB/lesson5$ mv link2.txt /home/user/Linux-GB/
+При перемещении ссылок в другой каталог символическая ссылка перестала работать, а жесткая продолжает работать.

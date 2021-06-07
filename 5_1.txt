@@ -1,0 +1,8 @@
+user@uservm:~/Linux-GB/lesson5$ echo "Hello world!" > file1.txt
+user@uservm:~/Linux-GB/lesson5$ cp file1.txt file2.txt
+user@uservm:~/Linux-GB/lesson5$ ln -s file1.txt file3.txt
+user@uservm:~/Linux-GB/lesson5$ ln  file1.txt file4.txt
+user@uservm:~/Linux-GB/lesson5$ ls -li
+у файлов file1.txt file4.txt inode одинаковый
+user@uservm:~/Linux-GB/lesson5$ rm file1.txt
+после удаления file1.txt перестала работать символическая ссылка file3.txt 

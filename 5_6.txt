@@ -1,0 +1,5 @@
+user@uservm:~/Linux-GB/lesson5$ mkdir directoty
+user@uservm:~/Linux-GB/lesson5$ cd directoty/
+user@uservm:~/Linux-GB/lesson5/directoty$ touch file1.txt
+user@uservm:~/Linux-GB/lesson5/directoty$ touch file2.txt
+user@uservm:~/Linux-GB/lesson5$ chmod -r directoty/

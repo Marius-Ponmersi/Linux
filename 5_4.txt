@@ -1,0 +1,8 @@
+user@uservm:~/Linux-GB/lesson5$ sudo groupadd developer
+user@uservm:~/Linux-GB/lesson5$ cat /etc/group | grep dev
+user@uservm:~/Linux-GB/lesson5$ sudo adduser duser1 --gid 1004
+user@uservm:~/Linux-GB/lesson5$ sudo adduser duser2 --gid 1004
+user@uservm:~/Linux-GB/lesson5$ mkdir project
+user@uservm:~/Linux-GB/lesson5$ sudo chgrp -R developer project/
+user@uservm:~/Linux-GB/lesson5$ chmod g+s project/
+
