@@ -1,0 +1,3 @@
+user@uservm:~/Linux-GB/lesson5$ mkdir ./project/exchain
+user@uservm:~/Linux-GB/lesson5/project$ sudo chgrp -R developer exchain/
+user@uservm:~/Linux-GB/lesson5/project$ chmod +t exchain/

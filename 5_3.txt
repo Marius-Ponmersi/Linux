@@ -1,0 +1,10 @@
+user@uservm:~/Linux-GB/lesson5$ touch file1.txt
+user@uservm:~/Linux-GB/lesson5$ touch file2.txt
+
+user@uservm:~/Linux-GB/lesson5$ chmod ug=rw file1.txt
+user@uservm:~/Linux-GB/lesson5$ chmod o=r file1.txt
+user@uservm:~/Linux-GB/lesson5$ chmod 664 file1.txt
+
+user@uservm:~/Linux-GB/lesson5$ chmod u=rw file2.txt
+user@uservm:~/Linux-GB/lesson5$ chmod go=--- file2.txt
+user@uservm:~/Linux-GB/lesson5$ chmod 600 file2.txt
