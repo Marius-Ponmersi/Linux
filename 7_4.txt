@@ -22,6 +22,8 @@ iptables -A INPUT -p UDP -m state --state ESTABLISHED,RELATED -j ACCEPT
 # Но если работаем как сервер SSH, следует разрешить и нужные порты
 iptables -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT 
 iptables -A OUTPUT -p tcp -m tcp --sport 22 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT 
+iptables -A OUTPUT -p tcp -m tcp --sport 80 -j ACCEPT
 
 
 # Настроим проброс портов локально с порта 80 на порт 8080
