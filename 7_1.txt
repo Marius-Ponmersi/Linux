@@ -1,0 +1,28 @@
+______________________________________Способ с сайта https://nginx.org/_____________________________________________________
+
+sudo apt install curl gnupg2 ca-certificates lsb-release
+echo "deb http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" \
+    | sudo tee /etc/apt/sources.list.d/nginx.list
+curl -o /tmp/nginx_signing.key https://nginx.org/keys/nginx_signing.key
+gpg --dry-run --quiet --import --import-options import-show /tmp/nginx_signing.key   # Проверяем, верный ли ключ был загружен
+sudo mv /tmp/nginx_signing.key /etc/apt/trusted.gpg.d/nginx_signing.asc   # Переместили ключ в каталог доверенных ключей apt
+sudo apt update
+sudo apt install nginx
+sudo dpkg -r nginx
+
+______________________________________Способ из методичики №1____________________________________________________________________
+
+sudo add-apt-repository ppa:nginx/stable   # С сайта https://launchpad.net/~nginx/+archive/ubuntu/stable
+sudo apt install nginx
+sudo dpkg -r nginx
+
+______________________________________Способ из методичики №2____________________________________________________________________
+
+sudo nano /etc/apt/sources.list
+
+deb [arch=amd64] http://nginx.org/packages/ubuntu focal nginx  # Добавляем в файл
+
+curl -fsSL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -
+sudo apt update
+sudo apt install nginx
+sudo dpkg -r nginx
