@@ -1,0 +1,8 @@
+user@uservm:~$ sudoedit /etc/ssh/sshd_config
+user@uservm:~$ ps -ef | grep sshd
+user@uservm:~$ systemctl restart sshd
+user@uservm:~$ ps -ef | grep sshd
+user@uservm:~$ systemctl reload sshd
+user@uservm:~$ ps -ef | grep sshd
+При restart меняеся PID, а при reload нет.
+Отключения пароля не происходит, пробовал по-разному, хоть PasswordAuthentication no, хоть yes.
