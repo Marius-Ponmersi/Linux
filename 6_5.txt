@@ -1,0 +1,35 @@
+user@uservm:~/Linux-GB/lesson6$ touch script5.sh
+user@uservm:~/Linux-GB/lesson6$ chmod +x script5.sh
+user@uservm:~/Linux-GB/lesson6$ nano script5.sh
+
+#!/bin/bash
+
+sudo reboot 
+
+
+user@uservm:~/Linux-GB/lesson6$ at -f /home/user/Linux-GB/lesson6/script5.sh 11:08pm 09.06.2021  # У меня дата в обычном формате вводится
+warning: commands will be executed using /bin/sh
+job 4 at Wed Jun  9 23:08:00 2021
+
+# скрипт сработал
+user@uservm:~/Linux-GB/lesson6$ Connection to 192.168.0.145 closed by remote host.
+Connection to 192.168.0.145 closed.
+
+
+user@uservm:~$  cat /var/log/syslog | grep -i 23:08
+Jun  9 23:08:01 uservm systemd[1]: Stopping Session 2 of user user.
+Jun  9 23:08:01 uservm systemd[1]: Stopping Session 23 of user user.
+Jun  9 23:08:01 uservm systemd[1]: Stopping Session 7 of user user.
+Jun  9 23:08:01 uservm systemd[1]: Removed slice system-getty.slice.
+Jun  9 23:08:01 uservm systemd[1]: Removed slice system-modprobe.slice.
+Jun  9 23:08:01 uservm systemd[1]: Stopped target Graphical Interface.
+Jun  9 23:08:01 uservm systemd[1]: Stopped target Multi-User System.
+Jun  9 23:08:01 uservm systemd[1]: Stopped target Login Prompts.
+Jun  9 23:08:01 uservm systemd[1]: Stopped target Sound Card.
+Jun  9 23:08:01 uservm kernel: [24309.058463] 16:08:01.759231 control  Guest control service stopped
+Jun  9 23:08:02 uservm kernel: [24310.261242] rfkill: input handler enabled
+Jun  9 23:08:02 uservm kernel: [24310.263746] 16:08:02.964570 control  Guest control worker returned with rc=VINF_TRY_AGAIN
+Jun  9 23:08:02 uservm kernel: [24310.263939] 16:08:02.964798 main     Session 0 is about to close ...
+Jun  9 23:08:02 uservm kernel: [24310.263988] 16:08:02.964856 main     Stopping all guest processes ...
+Jun  9 23:08:02 uservm kernel: [24310.264073] 16:08:02.964943 main     Closing all guest files ...
+Jun  9 23:08:02 uservm kernel: [24310.265858] 16:08:02.966705 main     Ended.

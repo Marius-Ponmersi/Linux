@@ -1,0 +1,1 @@
+user@uservm:~/Linux-GB/lesson6/task2$ grep -i '.*bus.*file$' /var/log/syslog

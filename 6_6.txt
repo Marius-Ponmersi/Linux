@@ -1,0 +1,18 @@
+user@uservm:~/Linux-GB/lesson6$ nano script6.sh
+
+
+#!/bin/bash
+
+tar -cf etc.tar /etc
+
+
+user@uservm:~/Linux-GB/lesson6$ chmod +x script6.sh
+user@uservm:~/Linux-GB/lesson6$ crontab -e
+
+17 23 8 6 * /home/user/Linux-GB/lesson6/script6.sh
+
+
+user@uservm:~/Linux-GB/lesson6$ tail -f /var/log/syslog | grep -i cron
+Jun  8 23:17:01 uservm CRON[4558]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  8 23:17:01 uservm CRON[4559]: (user) CMD (/home/user/Linux-GB/lesson6/script6.sh)
+Jun  8 23:17:05 uservm CRON[4557]: (CRON) info (No MTA installed, discarding output)

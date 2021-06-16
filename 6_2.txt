@@ -1,0 +1,31 @@
+#!/bin/bash
+
+for year in {2010..2017}
+do
+	mkdir $year
+	for month in {01..12}
+	do
+		mkdir $year/$month
+		for file in {001..003}
+		do
+			echo "Файл $file" > $year/$month/$file.txt
+		done
+	
+	done
+done
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------
+# Неудачная тренировка (оставил команды для себя)
+
+#!/bin/bash
+
+mkdir -p {2010..2017}/{01..12}
+touch {2010..2017}/{01..12}/{001..003}.txt
