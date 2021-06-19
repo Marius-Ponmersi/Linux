@@ -1,0 +1,8 @@
+user@uservm:~/Linux-GB$ sudo usermod -aG docker user
+user@uservm:~/Linux-GB$ su -u user
+user@uservm:~$ docker run -it --name Ubuntu20.04 ubuntu /bin/bash   # контейнер доступен интерактивно - опциb -i и -t:
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+c549ccf8d472: Pull complete                                                                                                                                                                                                                  Digest: sha256:aba80b77e27148d99c034a987e7da3a287ed455390352663418c0f2ed40417fe
+Status: Downloaded newer image for ubuntu:latest
+root@a39d0c0934b1:/#
